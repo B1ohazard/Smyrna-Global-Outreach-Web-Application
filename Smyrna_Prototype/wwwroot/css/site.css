@@ -1,0 +1,28 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+#produce_body {
+    background-image: url('../images/forrest1.jpg');
+    padding-top: 20px;
+    padding-right: 50px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 800px;
+    border-radius: 30px
+}

@@ -1,0 +1,91 @@
+﻿@model Smyrna_Prototype.Models.Enquiry
+
+@{
+	ViewData["Title"] = "Contact Page";
+}
+
+<link rel="stylesheet" href="~/css/newstyle.css" />
+
+<h1>Get in touch with us</h1>
+
+<section class="w3l-contact-11">
+	<div class="form-41-mian py-5">
+		<div class="container py-lg-4">
+			<div class="row align-form-map">
+				<div class="col-lg-6 contact-left pr-lg-4">
+					<div class="partners">
+						<div class="cont-details">
+							<div class="title-content text-left">
+								<h6 class="sub-title">Contact Us</h6>
+							</div>
+							<p class="mt-3 mb-4 pr-lg-5">
+								Hi there, We are available 24/7 by fax, e-mail or by phone. Feel free to contact us at any time.
+							</p>
+						</div>
+						<div class="hours">
+							<h6 class="mt-4">Email:</h6>
+							<p>
+								<a href="mailto:support@sgom.co.za" class=" mt-md-5 mt-4">support@sgom.co.za</a>
+							</p>
+							<h6 class="mt-4">Address:</h6>
+							<p> ThornRidge Farm, Alice Goswell Road, Cato Ridge, 3680, KwaZulu Natal, South Africa</p>
+							<h6 class="mt-4">Contact: Apostle Sardar Masih</h6>
+							<p class="margin-top">
+								<a href="tel:+(27) 32 541 6009">
+									+27 32 541 6009 / +27 31 782 1100
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 form-inner-cont">
+					<div class="title-content text-left">
+						<h3 class="hny-title mb-lg-5 mb-4">Send Us A Message</h3>
+					</div>
+					<form asp-action="Create" autocomplete="off">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<div class="form-group">
+							<label asp-for="FirstName" class="control-label"></label>
+							<input asp-for="FirstName" class="form-control" />
+							<span asp-validation-for="FirstName" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="LastName" class="control-label"></label>
+							<input asp-for="LastName" class="form-control" />
+							<span asp-validation-for="LastName" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="EmailAddress" class="control-label"></label>
+							<input asp-for="EmailAddress" class="form-control" />
+							<span asp-validation-for="EmailAddress" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="ContactNumber" class="control-label"></label>
+							<input asp-for="ContactNumber" class="form-control" />
+							<span asp-validation-for="ContactNumber" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<label asp-for="Message" class="control-label"></label>
+							<input asp-for="Message" class="form-control-plaintext" />
+							<span asp-validation-for="Message" class="text-danger"></span>
+						</div>
+						<div class="form-group">
+							<button class="btn success" type="submit" value="Create">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="map-container">
+    <div class="map-info">
+			<h3>ThornRidge Farm, Alice Goswell Road, Cato Ridge, 3680, KwaZulu Natal, South Africa</h3>
+        <p>Coordinates: -29.728004372722324, 30.59294766521988</p>
+        <p>Description: This is the location of Symrna Global Outreach in Cato Ridge, Durban.</p>
+    </div>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0.011371046867014614!2d30.59294766521988!3d-29.728004372722324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6f7598725c69f%3A0x79a06e7a61bb20ef!2sCato%20Ridge%2C%20Durban%2C%20South%20Africa!5e0!3m2!1sen!2sin!4v1570786994395&z=15"
+            frameborder="0" allowfullscreen=""></iframe>
+    </div>
+</div>
+</section>

@@ -1,0 +1,34 @@
+﻿@model Smyrna_Prototype.ViewModels.SearchProduceListViewModel
+
+<html>
+
+<link href="~/css/morph.css" rel="stylesheet" />
+
+<h1>Currently Available Produce</h1> <!--Page Heading-->
+<body>
+    <form autocomplete="off">
+        <p>
+            Search By Product Name: <input type="text" asp-for="SearchProductTypeString" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+
+    <ul style="padding-right: 40px">
+        <!--foreach to show the products-->
+        @foreach (var produce in Model.Products)
+        {
+            <li style="display: inline-block;">
+                <div id="productCard" class="card" style="width: 300px; ">
+                    <div id="productCard" class="container" style="background-color: transparent;">
+                        <img decoding="async" src="@("~/image/"+produce.ImageName)" asp-append-version="true" height="200" width="200" />
+                        <div style="font-weight: bold; color: #000">@produce.ProductName</div>
+                        <p><a style="text-decoration: none;" asp-controller="Produces" asp-action="Details" asp-route-id="@produce.ProductId">View Details</a></p>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</body>
+</html>
+
+
