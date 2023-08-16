@@ -1,7 +1,6 @@
 ﻿@model Smyrna_Prototype.Models.Donation
 
 <link rel="stylesheet" href="~/css/newstyle.css" />
-@*<link href="~/css/morph.css" rel="stylesheet" />*@
 
 <h1>Make a Donation</h1>
 
@@ -14,38 +13,18 @@
 			<div class="row align-form-map">
 				<div class="col-lg-6 contact-left pr-lg-4">
 					<div class="partners">
-						<div class="cont-details">
-							<div class="title-content text-left">
-								<h6 class="sub-title">We Appreciate Any and All Donations</h6>
-							</div>
-							<p class="mt-3 mb-4 pr-lg-5">
-								We are passionate to reach out to the homeless, drug addicted,
-								single moms, widows, prostitutes and rejects of society; telling them the Good News that Jesus loves them even though the world has rejected them.
-								Help us to give back to our community and help to fund our mission school.
-							</p>
-							<h5 class="mb-4">Donation Via EFT - Smyrna Global Outreach Details Below</h5>
-							<hr />
-						</div>
-						<div class="details">
-							<h6 class="mt-4">Bank:</h6>
-							<p>
-								FNB
-							</p>
-							<h6 class="mt-4">Account Name:</h6>
-							<p> Symrna Global Outreach</p>
-							<h6 class="mt-4">Account Number:</h6>
-							<p> 85238526963</p>
-							<h6 class="mt-4">Branch:</h6>
-							<p> Hillcrest</p>
-							<h6 class="mt-4">Branch Code:</h6>
-							<p> 223726</p>
-						</div>
 					</div>
+					<h5 class="sub-title">We Appreciate Any and All Donations</h5>
+					<p class="mt-3 mb-4 pr-lg-5">
+						We are passionate to reach out to the homeless, drug addicted,
+						single moms, widows, prostitutes and rejects of society; telling them the Good News that Jesus loves them even though the world has rejected them.
+						Help us to give back to our community and help to fund our mission school.
+					</p>
 				</div>
 				<div class="col-lg-6 form-inner-cont">
-					<div class="title-content text-left">
+					<div class="title-content text-right">
 						<h3 class="hny-title mb-lg-5 mb-4">Personal Information</h3>
-						<h4 class="hny-title mb-lg-5 mb-4">Complete the Donation Form and click Submit to proceed</h4>
+						<h4 class="hny-title mb-lg-5 mb-4">Complete the Donation Form and click Submit to proceed to pay points</h4>
 					</div>
 					<form asp-action="Create" autocomplete="off">
 						<div asp-validation-summary="ModelOnly" class="text-danger"></div>

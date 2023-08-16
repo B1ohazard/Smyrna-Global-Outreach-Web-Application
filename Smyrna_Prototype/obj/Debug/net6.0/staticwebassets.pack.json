@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Smyrna_Prototype.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Asian234331749.jpg",
+      "PackagePath": "staticwebassets\\Image\\Asian234331749.jpg"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Carrot230854067.jpg",
+      "PackagePath": "staticwebassets\\Image\\Carrot230854067.jpg"
+    },
+    {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\V1231322864.jpeg",
       "PackagePath": "staticwebassets\\Image\\V1231322864.jpeg"
     },
@@ -163,6 +171,10 @@
     {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\js\\vanilla-tilt.js",
+      "PackagePath": "staticwebassets\\js\\vanilla-tilt.js"
     },
     {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\lib\\bootstrap\\LICENSE",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zvq+Nr33DHyRX/OQXQe9h1bXixzclBauG2DxLyzckfk=",
+  "Hash": "RWFtFSTQQ+VSx9Yg6+HZEz/w59gzEEZ2olhQfs5RGOU=",
   "Source": "Smyrna_Prototype",
   "BasePath": "_content/Smyrna_Prototype",
   "Mode": "Default",
@@ -1139,6 +1139,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Asian234331749.jpg",
+      "SourceId": "Smyrna_Prototype",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\",
+      "BasePath": "_content/Smyrna_Prototype",
+      "RelativePath": "Image/Asian234331749.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Asian234331749.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Carrot230854067.jpg",
+      "SourceId": "Smyrna_Prototype",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\",
+      "BasePath": "_content/Smyrna_Prototype",
+      "RelativePath": "Image/Carrot230854067.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Carrot230854067.jpg"
+    },
+    {
       "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\V1231322864.jpeg",
       "SourceId": "Smyrna_Prototype",
       "SourceType": "Discovered",
@@ -1732,6 +1766,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\js\\vanilla-tilt.js",
+      "SourceId": "Smyrna_Prototype",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\",
+      "BasePath": "_content/Smyrna_Prototype",
+      "RelativePath": "js/vanilla-tilt.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\vanilla-tilt.js"
     },
     {
       "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",

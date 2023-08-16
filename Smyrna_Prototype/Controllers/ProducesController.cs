@@ -51,7 +51,7 @@ namespace Smyrna_Prototype.Controllers
             return View(produce);
         }
 
-        [Authorize(Roles = "Administrator")]
+        //[Authorize(Roles = "Administrator")]
         // GET: Produces/Create
         public IActionResult Create()
         {
