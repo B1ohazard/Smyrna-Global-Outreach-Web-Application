@@ -34,11 +34,11 @@ namespace Smyrna_Prototype.Controllers
                 await _emailSender.SendEmailAsync(
                 "fowlessean@yahoo.com",
 				"Enquiry Form",
-				"First Name: " + enquiry.FirstName +
-				"Last Name: " + enquiry.LastName +
-                "Contact Number: " + enquiry.ContactNumber +
-                "Message: " + enquiry.Message +
-                "Date: " + enquiry.Date
+				"First Name: " + enquiry.FirstName + " " +
+				"Last Name: " + enquiry.LastName + " " +
+                "Contact Number: " + enquiry.ContactNumber + " " +
+                "Message: " + enquiry.Message + " " +
+                "Date: " + enquiry.Date 
                 );
 
                 _context.Add(enquiry);

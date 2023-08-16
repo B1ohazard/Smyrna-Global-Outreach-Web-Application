@@ -17,12 +17,78 @@ body {
   margin-bottom: 60px;
 }
 
-#produce_body {
-    background-image: url('../images/forrest1.jpg');
-    padding-top: 20px;
-    padding-right: 50px;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 800px;
-    border-radius: 30px
+
+/*CSS for the cards on the Produce Page*/
+.containerP {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
 }
+
+    .container .card {
+        width: 200px;
+        height: 400px;
+        margin: 30px;
+        box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+        border-radius: 15px;
+        overflow: hidden;
+        display: flex;
+        backdrop-filter: blur(14px);
+        justify-content: center;
+        align-items: center;
+        vertical-align: top;
+        border-top: 1px solid rgba(255,255,255,0.5);
+        border-left: 1px solid rgba(255,255,255,0.5);
+    }
+
+        .container .card .content {
+            padding: 20px;
+            text-align: center;
+            transform: translateY(100px);
+            opacity: 1;
+            transition: 0.5s;
+            position: absolute;
+        }
+
+        .container .card:hover .content {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        .container .card .content p {
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .container .card .content a {
+            position: relative;
+            display: inline-block;
+            padding: 8px 20px;
+            margin-top: 15px;
+            color: #000;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+.produce {
+    flex: auto;
+    margin-bottom: 60px;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+
+
+.container .card .content .details {
+    font-size: 20px;
+    width: 400px;
+    height: 800px;
+    justify-content: center;
+}
+

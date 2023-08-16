@@ -19,6 +19,11 @@ namespace Smyrna_Prototype.Controllers
             return View();
         }
 
+        public IActionResult Donate()
+        {
+            return View();
+        }
+
 
         // POST: Donation/Index
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -33,7 +38,7 @@ namespace Smyrna_Prototype.Controllers
             {
                 _context.Add(donation);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Donate));
             }
             return View(donation);
         }
