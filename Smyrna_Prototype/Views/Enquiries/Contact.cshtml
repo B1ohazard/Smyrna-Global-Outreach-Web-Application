@@ -42,7 +42,7 @@
 					<div class="title-content text-left">
 						<h3 class="hny-title mb-lg-5 mb-4">Send Us A Message</h3>
 					</div>
-					<form asp-action="Create" autocomplete="off">
+					<form asp-action="Contact" autocomplete="off">
 						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 						<div class="form-group">
 							<label asp-for="FirstName" class="control-label"></label>
@@ -70,7 +70,7 @@
 							<span asp-validation-for="Message" class="text-danger"></span>
 						</div>
 						<div class="form-group">
-							<button class="btn success" type="submit" value="Create">Submit</button>
+							<button class="btn success" type="submit">Submit</button>
 						</div>
 					</form>
 				</div>

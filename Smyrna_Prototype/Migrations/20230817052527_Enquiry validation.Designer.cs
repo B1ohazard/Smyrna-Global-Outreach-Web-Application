@@ -12,8 +12,8 @@ using Smyrna_Prototype.Models;
 namespace Smyrna_Prototype.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230816161949_changed donation model")]
-    partial class changeddonationmodel
+    [Migration("20230817052527_Enquiry validation")]
+    partial class Enquiryvalidation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,7 +54,7 @@ namespace Smyrna_Prototype.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "697dc364-d322-4825-a3e5-92778df85e8a",
+                            ConcurrencyStamp = "720680bf-0a68-48d0-bb00-0aabe2d0821a",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -154,13 +154,13 @@ namespace Smyrna_Prototype.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ab6534d3-23b9-4ba0-aaf4-180d309ca9fc",
+                            ConcurrencyStamp = "49f06873-2a53-4016-b40c-2d013e709d9f",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@SMYRNA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEGiy6LatVC7TM7lsKqwefcpCuOpFAanEDLpmbL8NMIgWJdf4Y7d6OMPSSYkqcwc53g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEA53do/GGHv1Ry+jAuDViq1alQFWhFhslYTRwmMHJsfoin+PnbACqGaOxr0niYau+g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "1bf7d89b-9952-4080-b212-23dc5b7ca299",
+                            SecurityStamp = "baa07998-a127-4f21-a642-0200ddc9c97b",
                             TwoFactorEnabled = false,
                             UserName = "admin@smyrna.com"
                         });
@@ -298,21 +298,26 @@ namespace Smyrna_Prototype.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EnquiryId"), 1L, 1);
 
                     b.Property<string>("ContactNumber")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EmailAddress")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Message")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EnquiryId");
