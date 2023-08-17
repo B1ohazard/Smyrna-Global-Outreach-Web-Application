@@ -11,19 +11,19 @@ namespace Smyrna_Prototype.Models
         public int DonationId { get; set; }
 
         [DisplayName("First Name")]
+        [Required(ErrorMessage = "Enter your First Name")]
         public string? FirstName { get; set; }
 
         [DisplayName("Last Name")]
+        [Required(ErrorMessage = "Enter your Last Name")]
         public string? LastName { get; set; }
-
-        [DisplayName("Amount")]
-        public int Amount { get; set; }
 
         [DisplayName("Company Name")]
         public string? CompanyName { get; set; }
 
 		[DisplayName("Email Address")]
-		public string? EmailAddress { get; set; }
+        [Required(ErrorMessage = "Enter your Email Address")]
+        public string? EmailAddress { get; set; }
 
 		[DisplayName("Date")]
         public DateTime Date { get; set; }

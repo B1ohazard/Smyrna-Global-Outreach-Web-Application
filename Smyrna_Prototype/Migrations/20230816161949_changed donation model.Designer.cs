@@ -12,8 +12,8 @@ using Smyrna_Prototype.Models;
 namespace Smyrna_Prototype.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230812062829_seeded initial")]
-    partial class seededinitial
+    [Migration("20230816161949_changed donation model")]
+    partial class changeddonationmodel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -54,7 +54,7 @@ namespace Smyrna_Prototype.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "6774b967-0ab3-46f3-9a86-00084cba4679",
+                            ConcurrencyStamp = "697dc364-d322-4825-a3e5-92778df85e8a",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -154,13 +154,13 @@ namespace Smyrna_Prototype.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "98f0ce53-afe6-438f-b365-2c8246e92c72",
+                            ConcurrencyStamp = "ab6534d3-23b9-4ba0-aaf4-180d309ca9fc",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@SMYRNA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEAIqdwowJhRgWzvD7jg7zAb9LkUcHVEGat23uqhy3MPKp6cvlJpwxkYc9B88rbmBxw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGiy6LatVC7TM7lsKqwefcpCuOpFAanEDLpmbL8NMIgWJdf4Y7d6OMPSSYkqcwc53g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a7bbf703-1c0c-4986-9887-e81bcf2633dd",
+                            SecurityStamp = "1bf7d89b-9952-4080-b212-23dc5b7ca299",
                             TwoFactorEnabled = false,
                             UserName = "admin@smyrna.com"
                         });
@@ -194,10 +194,12 @@ namespace Smyrna_Prototype.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -241,10 +243,12 @@ namespace Smyrna_Prototype.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -262,9 +266,6 @@ namespace Smyrna_Prototype.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DonationId"), 1L, 1);
 
-                    b.Property<int>("Amount")
-                        .HasColumnType("int");
-
                     b.Property<string>("CompanyName")
                         .HasColumnType("nvarchar(max)");
 
@@ -272,12 +273,15 @@ namespace Smyrna_Prototype.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EmailAddress")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DonationId");

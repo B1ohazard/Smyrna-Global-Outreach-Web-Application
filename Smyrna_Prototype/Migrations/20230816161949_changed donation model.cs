@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Smyrna_Prototype.Migrations
 {
-    public partial class seededinitial : Migration
+    public partial class changeddonationmodel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -54,11 +54,10 @@ namespace Smyrna_Prototype.Migrations
                 {
                     DonationId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Amount = table.Column<int>(type: "int", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CompanyName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    EmailAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    EmailAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -148,8 +147,8 @@ namespace Smyrna_Prototype.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    ProviderKey = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
@@ -193,8 +192,8 @@ namespace Smyrna_Prototype.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    LoginProvider = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(128)", maxLength: 128, nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -211,12 +210,12 @@ namespace Smyrna_Prototype.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "6774b967-0ab3-46f3-9a86-00084cba4679", "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "697dc364-d322-4825-a3e5-92778df85e8a", "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "98f0ce53-afe6-438f-b365-2c8246e92c72", null, false, false, null, null, "ADMIN@SMYRNA.COM", "AQAAAAEAACcQAAAAEAIqdwowJhRgWzvD7jg7zAb9LkUcHVEGat23uqhy3MPKp6cvlJpwxkYc9B88rbmBxw==", null, false, "a7bbf703-1c0c-4986-9887-e81bcf2633dd", false, "admin@smyrna.com" });
+                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "ab6534d3-23b9-4ba0-aaf4-180d309ca9fc", null, false, false, null, null, "ADMIN@SMYRNA.COM", "AQAAAAEAACcQAAAAEGiy6LatVC7TM7lsKqwefcpCuOpFAanEDLpmbL8NMIgWJdf4Y7d6OMPSSYkqcwc53g==", null, false, "1bf7d89b-9952-4080-b212-23dc5b7ca299", false, "admin@smyrna.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
