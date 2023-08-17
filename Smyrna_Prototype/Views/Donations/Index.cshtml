@@ -26,7 +26,7 @@
 						<h3 class="hny-title mb-lg-5 mb-4">Personal Information</h3>
 						<h4 class="hny-title mb-lg-5 mb-4">Complete the Donation Form and click Submit to proceed to pay points</h4>
 					</div>
-					<form asp-action="Create" autocomplete="off">
+					<form asp-action="Index" autocomplete="off">
 						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 						<div class="form-group">
 							<label asp-for="FirstName" class="control-label"></label>
@@ -38,12 +38,6 @@
 							<label asp-for="LastName" class="control-label"></label>
 							<input asp-for="LastName" class="form-control" />
 							<span asp-validation-for="LastName" class="text-danger"></span>
-						</div>
-						<br />
-						<div class="form-group">
-							<label asp-for="Amount" class="control-label"></label>
-							<input asp-for="Amount" class="form-control" />
-							<span asp-validation-for="Amount" class="text-danger"></span>
 						</div>
 						<br />
 						<div class="form-group">
@@ -59,7 +53,7 @@
 						</div>
 						<br />
 						<div class="form-group">
-							<button class="btn success" type="submit" value="Create">Submit</button>
+							<button class="btn success" type="submit">Submit</button>
 						</div>
 					</form>
 				</div>
