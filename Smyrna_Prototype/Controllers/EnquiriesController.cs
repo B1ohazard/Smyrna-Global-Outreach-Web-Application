@@ -25,7 +25,7 @@ namespace Smyrna_Prototype.Controllers
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Create(Enquiry enquiry)
+		public async Task<IActionResult> Contact(Enquiry enquiry)
 		{
 			enquiry.Date = DateTime.Now;
 

@@ -10,19 +10,24 @@ namespace Smyrna_Prototype.Models
 		public int EnquiryId { get; set; }
 
 		[DisplayName("First Name")]
-		public string? FirstName { get; set; }
+        [Required(ErrorMessage = "Enter your First Name")]
+        public string? FirstName { get; set; }
 
 		[DisplayName("Last Name")]
-		public string? LastName { get; set; }
+        [Required(ErrorMessage = "Enter your Last Name")]
+        public string? LastName { get; set; }
 
 		[DisplayName("Email Address")]
-		public string? EmailAddress { get; set; }
+        [Required(ErrorMessage = "Enter your Email Address")]
+        public string? EmailAddress { get; set; }
 
 		[DisplayName("Contact Number")]
-		public string? ContactNumber { get; set; }
+        [Required(ErrorMessage = "Enter your Contact Number")]
+        public string? ContactNumber { get; set; }
 
 		[DisplayName("Message")]
-		public string? Message { get; set; }
+        [Required(ErrorMessage = "Enter a Message to let us know how we can help")]
+        public string? Message { get; set; }
 
 		[DisplayName("Date")]
 		public DateTime Date { get; set; }

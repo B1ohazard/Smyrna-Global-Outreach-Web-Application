@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Smyrna_Prototype.Migrations
 {
-    public partial class changeddonationmodel : Migration
+    public partial class Enquiryvalidation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -71,11 +71,11 @@ namespace Smyrna_Prototype.Migrations
                 {
                     EnquiryId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    EmailAddress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Message = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    EmailAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Message = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Date = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
@@ -210,12 +210,12 @@ namespace Smyrna_Prototype.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "697dc364-d322-4825-a3e5-92778df85e8a", "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "720680bf-0a68-48d0-bb00-0aabe2d0821a", "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "ab6534d3-23b9-4ba0-aaf4-180d309ca9fc", null, false, false, null, null, "ADMIN@SMYRNA.COM", "AQAAAAEAACcQAAAAEGiy6LatVC7TM7lsKqwefcpCuOpFAanEDLpmbL8NMIgWJdf4Y7d6OMPSSYkqcwc53g==", null, false, "1bf7d89b-9952-4080-b212-23dc5b7ca299", false, "admin@smyrna.com" });
+                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "49f06873-2a53-4016-b40c-2d013e709d9f", null, false, false, null, null, "ADMIN@SMYRNA.COM", "AQAAAAEAACcQAAAAEA53do/GGHv1Ry+jAuDViq1alQFWhFhslYTRwmMHJsfoin+PnbACqGaOxr0niYau+g==", null, false, "baa07998-a127-4f21-a642-0200ddc9c97b", false, "admin@smyrna.com" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
