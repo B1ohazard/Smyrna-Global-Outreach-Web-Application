@@ -18,5 +18,10 @@ namespace Smyrna_Prototype.Controllers
         {
             return View();
         }
+
+        public IActionResult VenueHire()
+        {
+            return View();
+        }
     }
 }
