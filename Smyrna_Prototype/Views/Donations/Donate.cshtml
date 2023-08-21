@@ -39,13 +39,27 @@
                 <!-- Right side content -->
                 <div class="cont-details">
                     <br />
-                    <h5 class="mb-4">PayPal Donation</h5>
+                    <h5 class="mb-4">Donation Via PayPal - Click The Button Below</h5>
                     <hr />
-                </div>
-                <div class="details">
-                    <button class="btn-success">PayPal</button>
+                
+                    <!--Button connected to the ParadigmProgramming PayPal account-->
+                <div id="donate-button-container">
+                    <div id="donate-button"></div>
+                    <script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+                    <script>
+                        PayPal.Donation.Button({
+                            env: 'production',
+                            hosted_button_id: 'EF2LE5FN6BJY8',
+                            image: {
+                                src: 'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+                                alt: 'Donate with PayPal button',
+                                title: 'PayPal - The safer, easier way to pay online!',
+                            }
+                        }).render('#donate-button');
+                    </script>
                 </div>
             </div>
+        </div>
         </div>
     </div>
 </body>

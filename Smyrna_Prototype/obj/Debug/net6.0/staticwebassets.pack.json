@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\Image\\Carrot230854067.jpg"
     },
     {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Carrot235811371.jpg",
+      "PackagePath": "staticwebassets\\Image\\Carrot235811371.jpg"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Celery235940797.jpg",
+      "PackagePath": "staticwebassets\\Image\\Celery235940797.jpg"
+    },
+    {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\V1231322864.jpeg",
       "PackagePath": "staticwebassets\\Image\\V1231322864.jpeg"
     },
@@ -49,6 +57,70 @@
       "PackagePath": "staticwebassets\\UploadedFiles\\rehabilitationform.pdf"
     },
     {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\favicon.ico",
+      "PackagePath": "staticwebassets\\assets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\missionaryimages\\missionary1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\missionaryimages\\missionary1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\missionaryimages\\missionary2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\missionaryimages\\missionary2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\missionaryimages\\missionary3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\missionaryimages\\missionary3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire1.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire10.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire10.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire11.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire11.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire12.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire12.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire2.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire3.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire4.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire5.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire6.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire6.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire7.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire7.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire8.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire8.png"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\assets\\img\\venuehireimages\\venuehire9.png",
+      "PackagePath": "staticwebassets\\assets\\img\\venuehireimages\\venuehire9.png"
+    },
+    {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\css\\morph.css",
       "PackagePath": "staticwebassets\\css\\morph.css"
     },
@@ -59,6 +131,10 @@
     {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\css\\venuestyles.css",
+      "PackagePath": "staticwebassets\\css\\venuestyles.css"
     },
     {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\favicon.ico",
