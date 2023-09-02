@@ -229,6 +229,10 @@
       "PackagePath": "staticwebassets\\images\\user.jpg"
     },
     {
+      "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\images\\userIco.png",
+      "PackagePath": "staticwebassets\\images\\userIco.png"
+    },
+    {
       "Id": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\images\\vegetables1.jpg",
       "PackagePath": "staticwebassets\\images\\vegetables1.jpg"
     },

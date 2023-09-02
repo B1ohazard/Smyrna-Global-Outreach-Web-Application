@@ -22,18 +22,20 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SERVICES</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Rehabilitation">REHABILITATION</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="MissionarySchool">MISSIONARY SCHOOL</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="OtherServices">OTHER SERVICES</a>
+                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="VenueHire">VENUE</a>
+                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Produces" asp-action="List">FRESH PRODUCE</a>
+                                @*<a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Rehabilitation">REHABILITATION</a>*@
+                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="MissionarySchool">MISSIONARY SCHOOL</a>
+                                @*<div class="dropdown-divider"></div>*@
+                                @*<a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="OtherServices">OTHER SERVICES</a>*@
                             </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
                         </li>
-                        <li class="nav-item">
+                        @*<li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Services" asp-action="VenueHire">VENUE</a>
-                        </li>
+                        </li>*@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Donations" asp-action="Index">DONATE</a>
                         </li>
@@ -43,9 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">ABOUT</a>
                         </li>
-                        <li class="nav-item">
+                       @* <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Produces" asp-action="List">FRESH PRODUCE</a>
-                        </li>
+                        </li>*@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Enquiries" asp-action="Contact">CONTACT</a>
                         </li>
@@ -58,10 +60,10 @@
                                 <a class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">ROLES</a>
                             </li>
                         }
-                        <li class="nav-item dropdown" style="padding-left: 300px">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">USER</a>
-                            <div class="dropdown-menu" style="padding-left: 300px">
-                                <partial name="_LoginPartial" />
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="~/images/userIco.png" width="20" height="20"/></a>
+                            <div class="dropdown-menu">
+                                <partial name="_LoginPartial"/>
                             </div>
                         </li>
                     </ul>
@@ -74,19 +76,19 @@
             @RenderBody()
         </main>
     </div>
-    @*<footer>
+    <footer>
             <div class="row">
                 <div class="col-md-6">
-                    <p>Smyrna Global Outreach. All rights reserved.</p>
+                    <p style="padding-left: 10px">Smyrna Global Outreach. All rights reserved.</p>
                 </div>
-                <div class="col-md-6 text-end">
+                <div class="col-md-4 text-end">
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
                         <li class="list-inline-item"><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
-    </footer>*@
+    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -23,5 +23,6 @@ namespace Smyrna_Prototype.Controllers
         {
             return View();
         }
+
     }
 }
