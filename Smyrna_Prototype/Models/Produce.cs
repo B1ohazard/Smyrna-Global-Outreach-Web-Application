@@ -11,12 +11,15 @@ namespace Smyrna_Prototype.Models
         public int ProductId { get; set; }
 
         [DisplayName("Product Name")]
+        [Required(ErrorMessage = "Enter the Name")]
         public string? ProductName { get; set; }
 
         [DisplayName("Product Description")]
+        [Required(ErrorMessage = "Enter the Description")]
         public string? ProductDescription { get; set; }
 
         [DisplayName("Product Qauntity")]
+        [Required(ErrorMessage = "Enter the Quantity")]
         public int ProductQuantity { get; set; }
 
         public string? Title { get; set; }
@@ -26,9 +29,11 @@ namespace Smyrna_Prototype.Models
 
         [NotMapped]
         [DisplayName("Upload File")]
+        [Required(ErrorMessage = "Please add an Image")]
         public IFormFile? ImageFile { get; set; }
 
         [DisplayName("Date")]
+        [Required(ErrorMessage = "Select a Date")]
         public DateTime Date { get; set; }
 
     }

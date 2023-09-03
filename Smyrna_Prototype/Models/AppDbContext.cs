@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
+using Smyrna_Prototype.Models;
 
 namespace Smyrna_Prototype.Models
 {
@@ -18,6 +19,7 @@ namespace Smyrna_Prototype.Models
 
         public DbSet<Enquiry> Enquiries { get; set; }
 
+        public DbSet<CustomerReview> CustomerReviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,5 +53,4 @@ namespace Smyrna_Prototype.Models
             );
         }
     }
-
 }

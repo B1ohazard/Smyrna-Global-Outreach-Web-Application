@@ -17,7 +17,7 @@ namespace Smyrna_Prototype.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.20")
+                .HasAnnotation("ProductVersion", "6.0.21")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -52,7 +52,7 @@ namespace Smyrna_Prototype.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "720680bf-0a68-48d0-bb00-0aabe2d0821a",
+                            ConcurrencyStamp = "d31c1dc7-b6d3-417d-bdac-6b3ebad574e6",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -152,13 +152,13 @@ namespace Smyrna_Prototype.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "49f06873-2a53-4016-b40c-2d013e709d9f",
+                            ConcurrencyStamp = "6f360ac2-b6b9-42c0-8687-3a73eaa2c219",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@SMYRNA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEA53do/GGHv1Ry+jAuDViq1alQFWhFhslYTRwmMHJsfoin+PnbACqGaOxr0niYau+g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEKl+I9UGC5cjrRzH1Glo2gFu6ZBwAajVyD6yrvHDBKcGjd87EgR9df72LimsaN4M4Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "baa07998-a127-4f21-a642-0200ddc9c97b",
+                            SecurityStamp = "0d44a793-4326-4a7b-b95b-8cf1e43d6dc2",
                             TwoFactorEnabled = false,
                             UserName = "admin@smyrna.com"
                         });
@@ -256,6 +256,38 @@ namespace Smyrna_Prototype.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Smyrna_Prototype.Models.CustomerReview", b =>
+                {
+                    b.Property<int>("ReviewId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"), 1L, 1);
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Review")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ReviewId");
+
+                    b.ToTable("CustomerReviews");
+                });
+
             modelBuilder.Entity("Smyrna_Prototype.Models.Donation", b =>
                 {
                     b.Property<int>("DonationId")
@@ -338,9 +370,11 @@ namespace Smyrna_Prototype.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductDescription")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProductName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ProductQuantity")

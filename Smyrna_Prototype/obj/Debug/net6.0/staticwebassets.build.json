@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AAJmzybEFiRnWMqho1Ci6yi7msUR2DGuNT6lWaLrjg0=",
+  "Hash": "G2K9nBS6CEKx04gngeYgskrv/hst2lC1AIHyScvvb9s=",
   "Source": "Smyrna_Prototype",
   "BasePath": "_content/Smyrna_Prototype",
   "Mode": "Default",
@@ -1428,6 +1428,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Asian232305841.jpg",
+      "SourceId": "Smyrna_Prototype",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\",
+      "BasePath": "_content/Smyrna_Prototype",
+      "RelativePath": "Image/Asian232305841.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Asian232305841.jpg"
+    },
+    {
       "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Asian234331749.jpg",
       "SourceId": "Smyrna_Prototype",
       "SourceType": "Discovered",
@@ -1477,6 +1494,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\Carrot235811371.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Celery232942856.jpg",
+      "SourceId": "Smyrna_Prototype",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\",
+      "BasePath": "_content/Smyrna_Prototype",
+      "RelativePath": "Image/Celery232942856.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\Celery232942856.jpg"
     },
     {
       "Identity": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\wwwroot\\Image\\Celery235940797.jpg",
