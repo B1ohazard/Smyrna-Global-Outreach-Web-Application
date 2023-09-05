@@ -1,4 +1,4 @@
-﻿@model Smyrna_Prototype.Models.CustomerReview
+﻿@model Smyrna_Prototype.ViewModels.AddReviewListViewModel
 @{
     ViewData["Title"] = "Venue Hire Page";
 }
@@ -129,54 +129,21 @@
     <div class="container">
         <br />  
         <h2>Customer Reviews</h2>
-        <ul style="padding-right: 40px">
-            <!--foreach to show the products-->
-           
-                <li style="display: inline-block;">
-                    <div class="container">
-                        <div style="height:fit-content; width:fit-content">
-                        <div class="content" style="border:solid; border-radius: 50px; background-color: #D9E3F1; padding: 20px">
-                                <h4>Review</h4>
-                                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur
-                                adipisicing
-                                elit.fugiat consequatur voluptatem nihil ad.Lorem illum facere aperiam consectetur adipisicing.
-                                @*<p><a class="btn success" asp-controller="Produces" asp-action="Details" asp-route-id="@produce.ProductId">View Details</a></p>*@
+            <ul style="padding-right: 40px">
+                <!--foreach to show the products-->
+                @foreach (var reviews in Model.AddReviews)
+                {
+                    <li style="display: inline-block;">
+                    <br />
+                    <div class="container" style="border: solid; background: #D9E3F1; border-radius: 30px; width: fit-content; height: fit-content;">
+                                <div class="content" style="padding: 20px;">
+                            <p>@reviews.Date.Date</p>
+                            <p>@reviews.CustomerReview - @reviews.CustomerName</p>
                             </div>
                         </div>
-                    </div>
-                </li>
-
-                <li style="display: inline-block;">
-                    <div class="container">
-                        <div style="height:fit-content; width:fit-content">
-                        <div class="content" style="border:solid; border-radius: 50px; background-color: #D9E3F1; padding: 20px">
-                                <h4>Review</h4>
-                                Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                                ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur
-                                adipisicing
-                                elit.fugiat consequatur voluptatem nihil ad.Lorem illum facere aperiam consectetur adipisicing.
-                                @*<p><a class="btn success" asp-controller="Produces" asp-action="Details" asp-route-id="@produce.ProductId">View Details</a></p>*@
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-            <li style="display: inline-block;">
-                <div class="container">
-                    <div style="height:fit-content; width:fit-content">
-                        <div class="content" style="border:solid; border-radius: 50px; background-color: #D9E3F1; padding: 20px">
-                            <h4>Review</h4>
-                            Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
-                            ultrices in ligula. Semper at tempufddfel. Lorem ipsum dolor sit amet consectetur
-                            adipisicing
-                            elit.fugiat consequatur voluptatem nihil ad.Lorem illum facere aperiam consectetur adipisicing.
-                            @*<p><a class="btn success" asp-controller="Produces" asp-action="Details" asp-route-id="@produce.ProductId">View Details</a></p>*@
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+                    </li>
+                }
+            </ul>
     </div>
 </section>
 <br />
@@ -185,30 +152,30 @@
         <div class="title-content text-left">
             <h3 class="hny-title mb-lg-5 mb-4">Write us a Review</h3>
         </div>
-        <form asp-action="CustomerReview" autocomplete="off">
+        <form asp-action="VenueHire" autocomplete="off">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <label asp-for="FName" class="control-label"></label>
+                <input asp-for="FName" class="form-control" />
+                <span asp-validation-for="FName" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+                <label asp-for="LName" class="control-label"></label>
+                <input asp-for="LName" class="form-control" />
+                <span asp-validation-for="LName" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <label asp-for="EmailAddress" class="control-label"></label>
-                <input asp-for="EmailAddress" class="form-control" />
-                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <label asp-for="Review" class="control-label"></label>
-                <textarea asp-for="Review" class="form-control"></textarea>
-                <span asp-validation-for="Review" class="text-danger"></span>
+                <label asp-for="ReviewStr" class="control-label"></label>
+                <textarea asp-for="ReviewStr" class="form-control"></textarea>
+                <span asp-validation-for="ReviewStr" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">

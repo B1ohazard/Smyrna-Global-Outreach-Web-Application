@@ -52,7 +52,7 @@ namespace Smyrna_Prototype.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "d31c1dc7-b6d3-417d-bdac-6b3ebad574e6",
+                            ConcurrencyStamp = "d120206f-98b4-42df-b6e6-8b0404b149e0",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });
@@ -152,13 +152,13 @@ namespace Smyrna_Prototype.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6f360ac2-b6b9-42c0-8687-3a73eaa2c219",
+                            ConcurrencyStamp = "a9dfbd98-e4af-49b5-8814-d35316d1e894",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "ADMIN@SMYRNA.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKl+I9UGC5cjrRzH1Glo2gFu6ZBwAajVyD6yrvHDBKcGjd87EgR9df72LimsaN4M4Q==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEB2JzqjuEQUOlGeZO3GtHebyXXUbb2Pr9qBPM5FJpH+tOBlTkQp++votnqmIeOB00w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0d44a793-4326-4a7b-b95b-8cf1e43d6dc2",
+                            SecurityStamp = "601cbab6-3a49-4eb3-9e67-174fc24fd1f2",
                             TwoFactorEnabled = false,
                             UserName = "admin@smyrna.com"
                         });
@@ -254,6 +254,30 @@ namespace Smyrna_Prototype.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Smyrna_Prototype.Models.AddReview", b =>
+                {
+                    b.Property<int>("AddReviewId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AddReviewId"), 1L, 1);
+
+                    b.Property<string>("CustomerName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CustomerReview")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("AddReviewId");
+
+                    b.ToTable("AddReviews");
                 });
 
             modelBuilder.Entity("Smyrna_Prototype.Models.CustomerReview", b =>

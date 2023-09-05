@@ -18,6 +18,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IProductRepository, ProduceRepository>();
+builder.Services.AddScoped<IAddReviewRepository, AddReviewRepository>();
+builder.Services.AddScoped<ICustomerReviewRepository, CustomerReviewRepository>();
 
 // Email Sender
 builder.Services.Configure<AuthMessageSenderOptions>(builder.Configuration.GetSection("AuthMessageSenderOptions"));
@@ -30,7 +32,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(config =>
         new TokenProviderDescriptor(
             typeof(CustomEmailConfirmationTokenProvider<IdentityUser>)));
     config.Tokens.EmailConfirmationTokenProvider = "CustomEmailConfirmation";
-}).AddEntityFrameworkStores<AppDbContext>();
+}).AddRoles<IdentityRole>()
+.AddEntityFrameworkStores<AppDbContext>();
 
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddTransient<CustomEmailConfirmationTokenProvider<IdentityUser>>();

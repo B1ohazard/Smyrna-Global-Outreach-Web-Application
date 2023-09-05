@@ -194,7 +194,6 @@ namespace Smyrna_Prototype.Controllers
             {
                 return View(productListViewModel);
             }
-
         }
 
         private bool ProduceExists(int id)

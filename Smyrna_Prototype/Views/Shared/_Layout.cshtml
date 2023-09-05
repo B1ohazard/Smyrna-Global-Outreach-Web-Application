@@ -19,38 +19,39 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SERVICES</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="VenueHire">VENUE</a>
-                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Produces" asp-action="List">FRESH PRODUCE</a>
-                                @*<a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="Rehabilitation">REHABILITATION</a>*@
-                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="MissionarySchool">MISSIONARY SCHOOL</a>
-                                @*<a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="OtherServices">OTHER SERVICES</a>*@
-                            </div>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Donations" asp-action="Index">DONATE</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Team">TEAM</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">ABOUT</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Team">TEAM</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Enquiries" asp-action="Contact">CONTACT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Donations" asp-action="Index">DONATE</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SERVICES</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="VenueHire">VENUE</a>
+                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Produces" asp-action="List">FRESH PRODUCE</a>
+                                <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="MissionarySchool">MISSIONARY SCHOOL</a>
+                                @*<a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="OtherServices">OTHER SERVICES</a>*@
+                            </div>
                         </li>
                         @if (User.Identity.IsAuthenticated)
                         { 
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Produces" asp-action="Index">ADD PRODUCE ITEMS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">ROLES</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">ADMIN SERVICES</a>
+                                <div class="dropdown-menu">
+                                    <a class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">ROLES</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Produces" asp-action="Index">ADD PRODUCE </a>
+                                    <a class="nav-link" asp-area="" asp-controller="AddReviews" asp-action="Index">ADD REVIEW</a>
+                                </div>
                             </li>
                         }
                         <li class="nav-item dropdown">
@@ -70,7 +71,7 @@
         </main>
     </div>
     <footer>
-            <div class="row" style="padding-top: 20px">
+        <div class="row" style="padding-top: 20px">
                 <div class="col-md-6">
                     <p style="padding-left: 10px">Smyrna Global Outreach. All rights reserved.</p>
                 </div>

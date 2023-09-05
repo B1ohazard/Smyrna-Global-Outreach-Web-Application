@@ -21,6 +21,8 @@ namespace Smyrna_Prototype.Models
 
         public DbSet<CustomerReview> CustomerReviews { get; set; }
 
+        public DbSet<AddReview> AddReviews { get; set; }    
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -52,5 +54,6 @@ namespace Smyrna_Prototype.Models
                 }
             );
         }
+
     }
 }

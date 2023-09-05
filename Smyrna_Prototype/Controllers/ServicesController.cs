@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
+using Smyrna_Prototype.Migrations;
 using Smyrna_Prototype.Models;
+using Smyrna_Prototype.ViewModels;
 
 namespace Smyrna_Prototype.Controllers
 {
@@ -8,11 +11,15 @@ namespace Smyrna_Prototype.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IEmailSender _emailSender;
+        private readonly IAddReviewRepository reviewRepository;
+        private readonly ICustomerReviewRepository customerReviewRepository;
 
-        public ServicesController(AppDbContext context, IEmailSender emailSender)
+        public ServicesController(AppDbContext context, IEmailSender emailSender, IAddReviewRepository reviewRepository, ICustomerReviewRepository customerReviewRepository)
         {
             _context = context;
             _emailSender = emailSender;
+            this.reviewRepository = reviewRepository;
+            this.customerReviewRepository = customerReviewRepository;
         }
 
         public IActionResult Rehabilitation()
@@ -32,33 +39,41 @@ namespace Smyrna_Prototype.Controllers
 
         public IActionResult VenueHire()
         {
-            return View();
+            var addReviewListViewModel = new AddReviewListViewModel();
+            addReviewListViewModel.AddReviews = reviewRepository.GetAllReviews;
+
+            return View(addReviewListViewModel);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> CustomerReview(CustomerReview customerReview)
+        public async Task<IActionResult> VenueHire(string FName, string LName, string Email, string ReviewStr, CustomerReview customerReview)
         {
-            customerReview.Date = DateTime.Now;
 
             if (ModelState.IsValid)
             {
-                await _emailSender.SendEmailAsync(
-                "fowlessean@yahoo.com",
-                "Venue Review",
-                "First Name: " + customerReview.FirstName + " |" +
-                "Last Name: " + customerReview.LastName + " |" +
-                "Last Name: " + customerReview.EmailAddress + " |" +
-                "Message: " + customerReview.Review + " |" +
-                "Date: " + customerReview.Date
-                );
+                CustomerReview custReview = new CustomerReview();
+                custReview.FirstName = FName;
+                custReview.LastName = LName;
+                custReview.EmailAddress = Email;
+                custReview.Review = ReviewStr;
+                custReview.Date = DateTime.Now;
 
-                _context.Add(customerReview);
+                await _emailSender.SendEmailAsync(
+                   "fowlessean@yahoo.com",
+                   "Venue Review Form",
+                   "First Name: " + customerReview.FirstName + " |" +
+                   "Last Name: " + customerReview.LastName + " |" +
+                   "Email Address: " + customerReview.EmailAddress + " |" +
+                   "Review: " + customerReview.Review + " |" +
+                   "Review Date: " + customerReview.Date
+                   );
+
+                _context.Add(custReview);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(VenueHire));
             }
-            return View(customerReview);
+            return View();
         }
-
     }
 }
