@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Smyrna_Prototype.Models
 {
@@ -25,7 +26,13 @@ namespace Smyrna_Prototype.Models
         [Required(ErrorMessage = "Enter your Venue Review here")]
         public string? Review { get; set; }
 
+        [DisplayName("Is Posted")]
+        public bool IsPosted { get; set; }
+
         [DisplayName("Date")]
         public DateTime Date { get; set; }
+
+        [NotMapped]
+        public IEnumerable<CustomerReview>? CustomerReviews { get; set; }
     }
 }

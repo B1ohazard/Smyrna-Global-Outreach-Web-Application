@@ -1,4 +1,4 @@
-﻿@model Smyrna_Prototype.ViewModels.AddReviewListViewModel
+﻿@model Smyrna_Prototype.Models.CustomerReview
 @{
     ViewData["Title"] = "Venue Hire Page";
 }
@@ -10,7 +10,6 @@
 <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
 <link href="~/css/venuestyles.css" rel="stylesheet" />
-@*<link rel="stylesheet" href="~/css/newstyle.css" />*@
 <link href="~/css/morph.css" rel="stylesheet" />
 
 <!-- Masthead-->
@@ -126,22 +125,24 @@
 </section>
 
 <section class="cust-review">
-    <div class="container">
+    <div class="container text-left">
         <br />  
         <h2>Customer Reviews</h2>
-            <ul style="padding-right: 40px">
+            <ul class="reviews-list">
                 <!--foreach to show the products-->
-                @foreach (var reviews in Model.AddReviews)
+                @foreach (var reviews in Model.CustomerReviews)
                 {
-                    <li style="display: inline-block;">
-                    <br />
-                    <div class="container" style="border: solid; background: #D9E3F1; border-radius: 30px; width: fit-content; height: fit-content;">
-                                <div class="content" style="padding: 20px;">
-                            <p>@reviews.Date.Date</p>
-                            <p>@reviews.CustomerReview - @reviews.CustomerName</p>
+                    if (@reviews.IsPosted == true)
+                    {
+                    <li class="customer-review">
+                            <div class="container">
+                                <div class="content">
+                                    <p style="font-weight: bold">@reviews.Date.Date</p>
+                                    <p>@reviews.Review - @reviews.FirstName @reviews.LastName</p>
+                                </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
+                    }   
                 }
             </ul>
     </div>
@@ -155,27 +156,27 @@
         <form asp-action="VenueHire" autocomplete="off">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FName" class="control-label"></label>
-                <input asp-for="FName" class="form-control" />
-                <span asp-validation-for="FName" class="text-danger"></span>
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <label asp-for="LName" class="control-label"></label>
-                <input asp-for="LName" class="form-control" />
-                <span asp-validation-for="LName" class="text-danger"></span>
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <label asp-for="EmailAddress" class="control-label"></label>
+                <input asp-for="EmailAddress" class="form-control" />
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">
-                <label asp-for="ReviewStr" class="control-label"></label>
-                <textarea asp-for="ReviewStr" class="form-control"></textarea>
-                <span asp-validation-for="ReviewStr" class="text-danger"></span>
+                <label asp-for="Review" class="control-label"></label>
+                <textarea asp-for="Review" class="form-control"></textarea>
+                <span asp-validation-for="Review" class="text-danger"></span>
             </div>
             <br />
             <div class="form-group">

@@ -92,4 +92,36 @@ body {
     justify-content: center;
 }
 
+footer {
+   /* position: absolute;*/
+    bottom: 0;
+    width: 100%;
+    background-color: #D9E3F1; /* Change this to your desired background color */
+    color: #000; /* Change this to your desired text color */
+   /* padding: 5px 0;
+    margin: 30px, 0px, 0px, 0px;*/
+}
+
+.cust-review {
+    text-align: left;
+    /* Add more styles as needed */
+}
+
+.customer-review {
+    border: solid;
+    background: #D9E3F1;
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* Add more styles as needed */
+}
+ .reviews-list {
+    list-style-type: none; /* This removes the list bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+
 

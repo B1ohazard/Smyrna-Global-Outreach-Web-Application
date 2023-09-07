@@ -22,37 +22,41 @@ namespace Smyrna_Prototype.Controllers
             return View();
         }
 
-        public IActionResult Donate()
-        {
-            return View();
-        }
-
-        // POST: Donation/Index
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Index(Donation donation)
         {
             donation.Date = DateTime.Now;
 
-                if (ModelState.IsValid)
-                {
-                    await _emailSender.SendEmailAsync(
-                    "fowlessean@yahoo.com",
-                    "Donation Form",
-                    "First Name: " + donation.FirstName + " |" +
-                    "Last Name: " + donation.LastName + " |" +
-                    "Company Name: " + donation.CompanyName + " |" +
-                    "Email Address: " + donation.EmailAddress + " |" +
-                    "Donation Date: " + donation.Date
-                    );
+            if (ModelState.IsValid)
+            {
+                await _emailSender.SendEmailAsync(
+                "fowlessean@yahoo.com",
+                "Donation Form",
+                "First Name: " + donation.FirstName + " |" +
+                "Last Name: " + donation.LastName + " |" +
+                "Company Name: " + donation.CompanyName + " |" +
+                "Email Address: " + donation.EmailAddress + " |" +
+                "Donation Date: " + donation.Date
+                );
 
-                    _context.Add(donation);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Donate));
-                }
-             return View(donation);
+                _context.Add(donation);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Donate));
+            }
+            return View(donation);
         }
+
+        public IActionResult Donate()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+
     }
 }

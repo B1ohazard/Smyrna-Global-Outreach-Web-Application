@@ -40,7 +40,6 @@
                                 <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="VenueHire">VENUE</a>
                                 <a class="dropdown-item nav-link" asp-area="" asp-controller="Produces" asp-action="List">FRESH PRODUCE</a>
                                 <a class="dropdown-item nav-link" asp-area="" asp-controller="Services" asp-action="MissionarySchool">MISSIONARY SCHOOL</a>
-                                @*<a class="dropdown-item" asp-area="" asp-controller="Services" asp-action="OtherServices">OTHER SERVICES</a>*@
                             </div>
                         </li>
                         @if (User.Identity.IsAuthenticated)
@@ -50,7 +49,7 @@
                                 <div class="dropdown-menu">
                                     <a class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">ROLES</a>
                                     <a class="nav-link" asp-area="" asp-controller="Produces" asp-action="Index">ADD PRODUCE </a>
-                                    <a class="nav-link" asp-area="" asp-controller="AddReviews" asp-action="Index">ADD REVIEW</a>
+                                    <a class="nav-link" asp-area="" asp-controller="Services" asp-action="CustomerReviews">VIEW VENUE REVIEWS</a>
                                 </div>
                             </li>
                         }
@@ -65,13 +64,20 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+   @* <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
+    </div>*@
+    <div class="container">
+        <main role="main" class="pb-3">
+            <partial name="_Notification" />
+            @RenderBody()
+        </main>
+        </div>
+    <br />
     <footer>
-        <div class="row" style="padding-top: 20px">
+        <div class="row" @*style="padding-top: 20px"*@>
                 <div class="col-md-6">
                     <p style="padding-left: 10px">Smyrna Global Outreach. All rights reserved.</p>
                 </div>

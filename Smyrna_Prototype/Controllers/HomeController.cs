@@ -16,6 +16,7 @@ namespace Smyrna_Prototype.Controllers
 
         public IActionResult Index()
         {
+            TempData["success"] = "Test";
             return View();
         }
 
