@@ -58,9 +58,6 @@ namespace Smyrna_Prototype.Controllers
             return View();
         }
 
-    // POST: Produces/Create
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,ProductName,ProductDescription,ProductQuantity,Title,ImageFile,Date")] Produce produce)
@@ -87,7 +84,6 @@ namespace Smyrna_Prototype.Controllers
             return View(produce);
         }
 
-        // GET: Produces/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Products == null)
@@ -103,9 +99,6 @@ namespace Smyrna_Prototype.Controllers
             return View(produce);
         }
 
-        // POST: Produces/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ProductId,ProductName,ProductDescription,ProductQuantity,Title,ImageName,Date")] Produce produce)
@@ -138,7 +131,6 @@ namespace Smyrna_Prototype.Controllers
             return View(produce);
         }
 
-        // GET: Produces/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Products == null)
@@ -156,19 +148,18 @@ namespace Smyrna_Prototype.Controllers
             return View(produce);
         }
 
-        // POST: Produces/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var imageModel = await _context.Products.FindAsync(id);
 
-            //delete image from wwwroot/image
+            // Delete image from wwwroot/image
             var imagePath = Path.Combine(_webHostEnvironment.WebRootPath, "image", imageModel.ImageName);
             if (System.IO.File.Exists(imagePath))
                 System.IO.File.Delete(imagePath);
 
-            //delete the record in the db
+            // Delete the record in the db
             _context.Products.Remove(imageModel);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

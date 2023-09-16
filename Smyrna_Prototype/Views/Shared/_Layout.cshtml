@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/SGO_V1.styles.css" asp-append-version="true" />
     <link href="~/css/morph.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -64,11 +65,7 @@
             </div>
         </nav>
     </header>
-   @* <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>*@
+    <partial name="_CookieConsentPartial" />
     <div class="container">
         <main role="main" class="pb-3">
             <partial name="_Notification" />

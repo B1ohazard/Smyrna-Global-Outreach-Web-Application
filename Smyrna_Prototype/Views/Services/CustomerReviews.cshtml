@@ -22,7 +22,7 @@
                         <p>@review.Review</p>
                         <p>@review.ReviewId</p>
                         <p><a class="btn btn-sm" asp-controller="Services" asp-action="PostReview" asp-route-id="@review.ReviewId">Post Review</a></p>
-                        <p><a class="btn btn-sm" asp-controller="" asp-action="" asp-route-id="">Delete Review</a></p>
+                        <p><a class="btn btn-sm" asp-controller="Services" asp-action="Delete" asp-route-id="@review.ReviewId">Delete Review</a></p>
                     </div>
                 </div>
             </li>

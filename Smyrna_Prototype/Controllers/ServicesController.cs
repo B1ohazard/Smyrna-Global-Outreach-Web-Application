@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.UI.Services;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
@@ -93,8 +94,6 @@ namespace Smyrna_Prototype.Controllers
                 return NotFound();
             }
 
-            /* if (ModelState.IsValid)
-             {*/
             try
                 {
                     _context.Update(customerReview);
@@ -114,8 +113,33 @@ namespace Smyrna_Prototype.Controllers
                 return RedirectToAction(nameof(CustomerReviews));
                
             }
-        /*    return RedirectToAction(nameof(CustomerReviews));
-        }*/
+
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null || _context.Products == null)
+            {
+                return NotFound();
+            }
+
+            var review = await _context.CustomerReviews
+                .FirstOrDefaultAsync(m => m.ReviewId == id);
+            if (review == null)
+            {
+                return NotFound();
+            }
+
+            return View(review);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            var review = await _context.CustomerReviews.FindAsync(id);
+            _context.CustomerReviews.Remove(review);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(CustomerReviews));
+        }
 
         private bool ReviewExists(int id)
         {

@@ -11166,11 +11166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\Smyrna_Prototype.csproj",
+      "projectUniqueName": "C:\\Users\\fowle\\OneDrive\\Desktop\\Cookies\\Smyrna_Prototype\\Smyrna_Prototype\\Smyrna_Prototype.csproj",
       "projectName": "Smyrna_Prototype",
-      "projectPath": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\Smyrna_Prototype.csproj",
+      "projectPath": "C:\\Users\\fowle\\OneDrive\\Desktop\\Cookies\\Smyrna_Prototype\\Smyrna_Prototype\\Smyrna_Prototype.csproj",
       "packagesPath": "C:\\Users\\fowle\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fowle\\source\\repos\\Smyrna_Prototype\\Smyrna_Prototype\\obj\\",
+      "outputPath": "C:\\Users\\fowle\\OneDrive\\Desktop\\Cookies\\Smyrna_Prototype\\Smyrna_Prototype\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

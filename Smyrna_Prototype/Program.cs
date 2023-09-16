@@ -37,6 +37,13 @@ builder.Services.AddDefaultIdentity<IdentityUser>(config =>
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 builder.Services.AddTransient<CustomEmailConfirmationTokenProvider<IdentityUser>>();
 
+// Cookie policy
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+    options.CheckConsentNeeded = context => true;
+    options.MinimumSameSitePolicy = SameSiteMode.None;
+});
+
 builder.Services.Configure<DataProtectionTokenProviderOptions>(o =>
        o.TokenLifespan = TimeSpan.FromHours(3));
 
@@ -62,6 +69,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.MapRazorPages();
+app.UseCookiePolicy();
 
 app.UseRouting();
 app.UseAuthentication();;
