@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Smyrna_Final.props" />
+</Project>

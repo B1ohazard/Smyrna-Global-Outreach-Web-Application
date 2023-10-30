@@ -1,0 +1,86 @@
+﻿@model Smyrna_Prototype.Models.Donation
+
+<link rel="stylesheet" href="~/css/newstyle.css" />
+
+<h1>Make a Donation</h1>
+
+<section class="w3l-contact-11">
+	<div class="form-41-mian py-5">
+		<div>
+            <img src="~/images/donatebanner.jpg" alt="section-image" class="img-section" id="donatebanner"/>
+		</div>
+		<div class="container py-lg-4">
+			<div class="row align-form-map">
+				<div class="col-lg-6 contact-left pr-lg-4">
+					<div class="partners">
+					</div>
+					<h5 class="sub-title">“A generous person will prosper; whoever refreshes others will be refreshed “– Proverbs 11:25 (NIV)</h5>
+					<p class="mt-3 mb-4 pr-lg-5">
+						Smyrna Global Outreach (SGO) is a non-government, non –profit, and non-sectarian organization. SGO is registered with the Government of South Africa as a Charity Organization under the section Public Benefit organization registered with SARS (PBO NO: 930026023) which is working for the community empowerment, Church planting, Discipleship training, improvement of the livelihood of the poor, protection of rights of the marginalized and oppressed without any discrimination on the basis of gender, caste, religion or any other ethnic identities.
+						<br />
+						<br />
+						SGO is an organization that aims to create lasting change for children in need in South Africa, through means of strengthening education services
+						<br />
+						<br />
+						Due to the overwhelming requests for assistance that we receive, our responsibilities have indeed increased. The Pandemic also had a negative impact in the sense that we were unable to secure consistent sponsorships. Naturally, our income and support is not how it used to be, as we were very productive in the past.
+						<br />
+						<br />
+						The Lord Bless You as you partner with us by donating towards these many causes. We are ever so grateful and appreciate your generosity as you continue to sow into the Kingdom of God and His work, for His namesake and for His Glory.
+					</p>
+					<br />
+					<h4>Donation Of Goods</h4>
+					<p class="mt-3 mb-4 pr-lg-5">
+						We are happy to recieve goods donations - The following items are what are most in need:
+					</p>
+					<ul class="align-items-lg-start" style="font-weight: 500">
+						<li>Seedlings (Fruit and Vegetables)</li>
+						<li>Garden Equipment</li>
+						<li>Volunteer Work</li>
+					</ul>
+					<p class="mt-3 mb-4 pr-lg-5">
+						We are always looking for volunteers! If you would like to volunteer, please contact us using the link below
+					</p>
+					<a class="btn btn-sm" href="/Enquiries/Contact">
+						Contact Us
+					</a>
+				</div>
+				<div class="col-lg-6 form-inner-cont">
+					<div class="title-content text-right">
+						<h3 class="hny-title mb-lg-5 mb-4">Personal Information</h3>
+						<h4 class="hny-title mb-lg-5 mb-4">Complete the Donation Form and click Submit to proceed to pay points</h4>
+					</div>
+					<form asp-action="Index" autocomplete="off">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<div class="form-group">
+							<label asp-for="FirstName" class="control-label"></label>
+							<input asp-for="FirstName" class="form-control" />
+							<span asp-validation-for="FirstName" class="text-danger"></span>
+						</div>
+						<br />
+						<div class="form-group">
+							<label asp-for="LastName" class="control-label"></label>
+							<input asp-for="LastName" class="form-control" />
+							<span asp-validation-for="LastName" class="text-danger"></span>
+						</div>
+						<br />
+						<div class="form-group">
+							<label asp-for="CompanyName" class="control-label"></label>
+							<input asp-for="CompanyName" class="form-control" />
+							<span asp-validation-for="CompanyName" class="text-danger"></span>
+						</div>
+						<br />
+						<div class="form-group">
+							<label asp-for="EmailAddress" class="control-label"></label>
+							<input asp-for="EmailAddress" class="form-control" />
+							<span asp-validation-for="EmailAddress" class="text-danger"></span>
+						</div>
+						<br />
+						<div class="form-group">
+							<button class="btn success" type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
